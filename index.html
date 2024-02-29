@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunting phone</title>
+    <!-- Daisy UI and tailwind link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="mx-10">
+    <h1 class="text-6xl">Hounting phone</h1>
+    <main>
+        <!-- search releted input -->
+        <section class="bg-gray-100 my-5 rounded-lg">
+            <div class="py-3 pl-3">
+                <input id="search-field" type="search" placeholder="Search here.."
+                    class="input input-bordered w-full max-w-xs" />
+                <button onclick="handleSearch()" class="btn btn-primary text-white">Search</button>
+                <!-- another input field -->
+                <!-- <input id="search-field2" type="search" placeholder="Search here.."
+                    class="input input-bordered w-full max-w-xs" />
+                <button onclick="handleSearch2()"
+                    class="bg-orange-500 border-orange-500 btn btn-primary text-white">Search</button> -->
+            </div>
+        </section>
+        <!-- spinner section -->
+        <section id="spinner-field" class="text-center hidden">
+            <span class=" text-red-500 loading loading-infinity loading-lg "></span>
+        </section>
+        <section>
+            <div id="card-div" class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-6">
+            </div>
+        </section>
+        <!-- show all -->
+        <div class="text-center">
+            <button onclick="showMore()" id="show-more-btn" class="hidden btn btn-success mt-6">See all</button>
+        </div>
+        <!-- modal section -->
+        <!-- Open the modal using ID.showModal() method -->
+        <dialog id="my_modal_1" class="modal">
+            <div class="modal-box">
+                <h3 id="show-phone-name" class="font-bold text-lg">Hello!</h3>
+                <p class="py-4">Press ESC key or click the button below to close</p>
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+    </main>
+    <script src="js/phone.js"></script>
+</body>
+
+</html>
